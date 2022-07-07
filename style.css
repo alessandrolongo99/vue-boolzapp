@@ -43,6 +43,7 @@ img {
 }
 
 /* LEFT STYLE */
+/* USER-BAR */
 .user-bar {
     height: 60px;
     background-color: #eaeaea;
@@ -65,4 +66,21 @@ button {
     background-color: transparent;
     color: #b1b1b1;
     font-size: 20px;
+}
+
+.notification{
+    background-color: #8edafc;
+    height: 60px;
+    padding: 10px;
+}
+
+.bell{
+    color: #8edafc;
+    font-size: 20px;
+    border-radius: 50%;
+    background-color: white;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    line-height: 36px;
 }
