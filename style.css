@@ -99,3 +99,21 @@ button {
     line-height: 12px;
     color: grey;
 }
+
+.search-bar {
+    padding: 5px;
+    background-color: #fafafa;
+}
+
+.search-bar button {
+    background-color: white;
+    height: 100%;
+    width: calc(100% / 6);
+    border: 1px solid #b1b1b1;
+    color: #b1b1b1;
+}
+
+.search-bar input {
+    width: calc(100% / 6 * 5);
+    border: 1px solid #b1b1b1;
+}
