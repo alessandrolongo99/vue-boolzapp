@@ -109,13 +109,13 @@ button {
     background-color: white;
     height: 100%;
     width: calc(100% / 6);
-    border: 1px solid #b1b1b1;
+    border: 1px solid #eaeaea;
     color: #b1b1b1;
 }
 
 .search-bar input {
     width: calc(100% / 6 * 5);
-    border: 1px solid #b1b1b1;
+    border: 1px solid #eaeaea;
     padding-left: 5px;
 }
 
@@ -169,4 +169,28 @@ button {
 
 .top-bar {
     align-self: center;
+}
+
+.chat-body{
+    height: calc(100% - 120px);
+    overflow-y: scroll;
+    background-image: url('./img/mine.jpg');
+}
+
+/* TEXT-BAR */
+.text-bar{
+    height: 60px;
+    background-color: #f3eeea;
+}
+
+.text-input{
+    width: 80%;
+    height: 40px;
+    border: none;
+}
+
+.text-bar button{
+    width: 10%;
+    color: grey;
+    font-size: 20px;
 }
