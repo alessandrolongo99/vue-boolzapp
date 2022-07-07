@@ -1,6 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
+        index: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -164,6 +165,14 @@ const app = new Vue({
                 ],
             }
         ]
+    },
+    methods: {
+        imgPath(index) {
+            return "./img/avatar" + this.contacts[index].avatar + ".jpg";
+        },
+        getAvatar() {
+            return "avatar" + this.contacts.avatar;
+        }
     }
 });
 
