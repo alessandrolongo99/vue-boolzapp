@@ -68,13 +68,13 @@ button {
     font-size: 20px;
 }
 
-.notification{
+.notification {
     background-color: #8edafc;
     height: 60px;
     padding: 10px;
 }
 
-.bell{
+.bell {
     color: #8edafc;
     font-size: 20px;
     border-radius: 50%;
@@ -83,4 +83,19 @@ button {
     width: 40px;
     text-align: center;
     line-height: 36px;
+}
+
+.notification-notes {
+    padding-left: 10px;
+}
+
+.notification-notes div {
+    font-size: 14px;
+    line-height: 14px;
+}
+
+.notification-notes a {
+    font-size: 12px;
+    line-height: 12px;
+    color: grey;
 }
