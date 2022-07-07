@@ -1,0 +1,18 @@
+.body-green{
+    height: 15vh;
+    background-color: #009688;
+}
+
+.body-light{
+    height: 85vh;
+    background-color: #dadbd4;
+}
+
+.container{
+    position: fixed;
+    background-color: white;
+    height: 90vh;
+    top: 5vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
