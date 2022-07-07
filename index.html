@@ -47,7 +47,7 @@
                     <div v-for="(contact, index) in contacts" class="contact d-flex position-relative">
                         <img :src="imgPath(index)" :alt="getAvatar">
                         <div class="contact-info d-flex flex-column justify-content-center">
-                            <div class="contact-name fw-semibold">Michele</div>
+                            <div class="contact-name fw-semibold">{{contact.name}}</div>
                             <div class="last-message">Ultimo messaggio inviato</div>
                         </div>
                         <div class="last-message-time position-absolute">
@@ -57,7 +57,22 @@
 
                 </div>
             </div>
+
             <div class="right">
+                <div class="contact chat-bar d-flex justify-content-between align-items-center">
+                    <div class="d-flex">
+                        <img src="./img/avatar_1.jpg" alt="avatar_1">
+                        <div class="top-bar contact-info d-flex flex-column justify-content-center">
+                            <div class="contact-name fw-semibold">Michele</div>
+                            <div class="last-message">Ultimo accesso oggi alle 12:00</div>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button><i class="bi bi-search"></i></button>
+                        <button><i class="bi bi-paperclip"></i></button>
+                        <button><i class="bi bi-three-dots-vertical"></i></button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
