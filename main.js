@@ -172,9 +172,6 @@ const app = new Vue({
         },
         getAvatar() {
             return "avatar" + this.contacts.avatar;
-        },
-        addActive(index){
-            return "active-contact";
         }
     }
 });

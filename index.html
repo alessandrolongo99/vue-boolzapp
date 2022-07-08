@@ -77,8 +77,9 @@
 
                 <div class="chat-body">
                     <div class="message-container d-flex flex-column">
-                        <div v-for="(message, index) in contacts[currentIndex].messages"
-                            class="message rounded sent-message">{{message.message}}<span>{{message.date}}</span></div>
+                        <div v-for="(message, index) in contacts[currentIndex].messages" :class="message.status"
+                            class="message d-flex align-items-center rounded">
+                            {{message.message}}<span>{{message.date}}</span></div>
                     </div>
                 </div>
 
