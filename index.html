@@ -85,7 +85,8 @@
 
                 <div class="text-bar d-flex justify-content-around align-items-center">
                     <button class="text-center"><i class="bi bi-emoji-smile"></i></button>
-                    <input class="text-input rounded" type="text">
+                    <input @keyup.enter="pushMessage(newMessage)" v-model.trim="newMessage" class="text-input rounded"
+                        type="text" placeholder="Scrivi un messaggio">
                     <button class="text-center"><i class="bi bi-mic-fill"></i></button>
                 </div>
             </div>

@@ -2,6 +2,7 @@ const app = new Vue({
     el: '#root',
     data: {
         currentIndex: 0,
+        newMessage: '',
         contacts: [
             {
                 name: 'Michele',
@@ -172,7 +173,18 @@ const app = new Vue({
         },
         getAvatar() {
             return "avatar" + this.contacts.avatar;
+        },
+        pushMessage(newMessage) {
+            if (newMessage == '') {
+                console.warn('elemento vuoto');
+            } else {
+                this.contacts[this.currentIndex].messages.push({
+                    date: '12:00',
+                    message: newMessage,
+                    status: 'sent'
+                })
+                this.newMessage = '';
+            }
         }
     }
 });
-
