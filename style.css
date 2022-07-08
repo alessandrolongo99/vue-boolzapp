@@ -146,6 +146,10 @@ button {
     line-height: 16px;
 }
 
+.active-contact{
+    background-color: #e9ebeb;
+}
+
 .last-message {
     color: #b1b1b1;
     font-size: 12px;
@@ -205,6 +209,7 @@ button {
 .message {
     height: 45px;
     min-width: 250px;
+    max-width: 500px;
     font-size: 14px;
     line-height: 45px;
     padding: 0 13px;

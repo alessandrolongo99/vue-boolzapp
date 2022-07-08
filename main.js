@@ -1,7 +1,7 @@
 const app = new Vue({
     el: '#root',
     data: {
-        index: 0,
+        currentIndex: 0,
         contacts: [
             {
                 name: 'Michele',
@@ -172,6 +172,9 @@ const app = new Vue({
         },
         getAvatar() {
             return "avatar" + this.contacts.avatar;
+        },
+        addActive(index){
+            return "active-contact";
         }
     }
 });
