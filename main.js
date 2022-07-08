@@ -3,6 +3,7 @@ const app = new Vue({
     data: {
         currentIndex: 0,
         newMessage: '',
+        search: '',
         contacts: [
             {
                 name: 'Michele',
@@ -193,6 +194,11 @@ const app = new Vue({
                 message: 'ok',
                 status: 'received'
             })
+        },
+        searchName(){
+            this.contacts.forEach(element => {
+                return element.visible = element.name.toLowerCase().includes(this.search.toLowerCase());
+            });
         }
     }
 });

@@ -40,12 +40,13 @@
 
                 <div class="search-bar d-flex">
                     <button class="p-0"><i class="bi bi-search"></i></button>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+                    <input v-model="search" @keyup="searchName" type="text" placeholder="Cerca o inizia una nuova chat">
                 </div>
 
                 <div class="contacts">
                     <div @click="currentIndex = index" :class="{'active-contact': index == currentIndex}"
-                        v-for="(contact, index) in contacts" class="contact d-flex position-relative">
+                        v-if="contact.visible" v-for="(contact, index) in contacts"
+                        class="contact d-flex position-relative">
                         <img :src="imgPath(index)" :alt="getAvatar">
                         <div class="contact-info d-flex flex-column justify-content-center">
                             <div class="contact-name fw-semibold">{{contact.name}}</div>
