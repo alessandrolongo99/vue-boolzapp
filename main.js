@@ -4,7 +4,6 @@ const app = new Vue({
         currentIndex: 0,
         newMessage: '',
         search: '',
-        showHover : false,
         contacts: [
             {
                 name: 'Michele',
@@ -196,10 +195,13 @@ const app = new Vue({
                 status: 'received'
             })
         },
-        searchName(){
+        searchName() {
             this.contacts.forEach(element => {
                 return element.visible = element.name.toLowerCase().includes(this.search.toLowerCase());
             });
+        },
+        deleteMessage(index) {
+            this.contacts[this.currentIndex].messages.splice(index, 1);
         }
     }
 });

@@ -239,4 +239,9 @@ button {
 /* DROPDOWN */
 .ms-dropdown{
     right: 5px;
+    display: none;
+}
+
+.message:hover div{
+    display: block;
 }

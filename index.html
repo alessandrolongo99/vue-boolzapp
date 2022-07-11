@@ -90,17 +90,16 @@
                 <!-- CHAT BODY -->
                 <div class="chat-body">
                     <div class="message-container d-flex flex-column">
-                        <div @mouseover="showHover = true" @mouseleave="showHover = false"
-                            v-for="(message, index) in contacts[currentIndex].messages" :class="message.status"
+                        <div v-for="(message, index) in contacts[currentIndex].messages" :class="message.status"
                             class="message d-flex align-items-center rounded">
                             {{message.message}}<span>{{message.date}}</span>
-                            <div v-show="showHover" class="dropdown ms-dropdown position-absolute">
+                            <div class="dropdown ms-dropdown position-absolute">
                                 <button class="btn dropdown-toggle" type="button" id="dropdownMenuButton1"
                                     data-bs-toggle="dropdown" aria-expanded="false">
                                 </button>
                                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                                     <li><a class="dropdown-item" href="#">Message info</a></li>
-                                    <li><a class="dropdown-item" href="#">Delete message</a></li>
+                                    <li><a @click="deleteMessage(index)" class="dropdown-item" href="#">Delete message</a></li>
                                 </ul>
                             </div>
                         </div>
