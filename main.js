@@ -176,11 +176,12 @@ const app = new Vue({
             return "avatar" + this.contacts.avatar;
         },
         pushMessage(newMessage) {
+            const now = moment();
             if (newMessage == '') {
                 console.warn('elemento vuoto');
             } else {
                 this.contacts[this.currentIndex].messages.push({
-                    date: '12:00',
+                    date: now.format('DD/MM/YY HH:mm:ss'),
                     message: newMessage,
                     status: 'sent'
                 })
@@ -189,8 +190,9 @@ const app = new Vue({
             }
         },
         answerMessage() {
+            const now = moment();
             this.contacts[this.currentIndex].messages.push({
-                date: '12:00',
+                date: now.format('DD/MM/YY HH:mm:ss'),
                 message: 'ok',
                 status: 'received'
             })
@@ -202,6 +204,10 @@ const app = new Vue({
         },
         deleteMessage(index) {
             this.contacts[this.currentIndex].messages.splice(index, 1);
+        },
+        showDate(date){
+            let temp = moment(date, 'DD/MM/YY hh:mm:ss').format('HH:mm');
+            return temp;
         }
     }
 });
