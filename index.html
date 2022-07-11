@@ -63,9 +63,9 @@
                         <img :src="imgPath(index)" :alt="getAvatar">
                         <div class="contact-info d-flex flex-column justify-content-center">
                             <div class="contact-name fw-semibold">{{contact.name}}</div>
-                            <div class="last-message">{{contact.messages[contact.messages.length - 1].message}}</div>
+                            <div v-if="contact.messages.length > 0" class="last-message">{{contact.messages[contact.messages.length - 1].message}}</div>
                         </div>
-                        <div class="last-message-time position-absolute">
+                        <div v-if="contact.messages.length > 0" class="last-message-time position-absolute">
                             {{showDate(contact.messages[contact.messages.length - 1].date)}}
                         </div>
                     </div>
