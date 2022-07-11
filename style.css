@@ -235,3 +235,8 @@ button {
     bottom: 2px;
     right: 5px;
 }
+
+/* DROPDOWN */
+.ms-dropdown{
+    right: 5px;
+}

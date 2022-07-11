@@ -4,6 +4,7 @@ const app = new Vue({
         currentIndex: 0,
         newMessage: '',
         search: '',
+        showHover : false,
         contacts: [
             {
                 name: 'Michele',
